@@ -1,0 +1,25 @@
+// Menu.js
+import React from 'react';
+import { StyledSideMenu } from './side-menu.styled';
+import PropTypes from 'prop-types';
+import { Link } from "gatsby"
+
+const Menu = ({open}) => {
+    return (
+        <StyledSideMenu open={open}>
+            <Link to="/"> home </Link>
+            <Link to="/services"> services</Link>
+            <Link to="/testimonial"> testimonials</Link>
+            <Link to="/network"> network</Link>
+            <Link to="/articles"> articles</Link>
+            <Link to="/about"> about</Link>
+            <Link to="/contact"> contact</Link>
+        </StyledSideMenu>
+    )
+}
+
+Menu.propTypes = {
+    open: PropTypes.bool.isRequired
+}
+
+export default Menu;
