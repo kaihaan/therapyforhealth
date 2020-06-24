@@ -3,8 +3,21 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const path = require(`path`)
+
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-styled-components', 
+    'gatsby-transformer-sharp', 
+    'gatsby-plugin-sharp',
+    'gatsby-image',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'src', 'assets', 'images'),
+      },
+    },],
 }
