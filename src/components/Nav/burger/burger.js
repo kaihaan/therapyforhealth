@@ -1,6 +1,6 @@
 // Burger.js
 import React from 'react';
-import { StyledBurger } from './Burger.styled';
+import { StyledBurger } from './burger.styled';
 import PropTypes from 'prop-types';
 
 const Burger = ({ open, setOpen }) => {
