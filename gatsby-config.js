@@ -10,16 +10,6 @@ module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-styled-components', 
-    'gatsby-transformer-sharp', 
-    'gatsby-plugin-sharp',
-    'gatsby-image',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: path.join(__dirname, 'src', 'assets', 'images'),
-      },
-    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -32,3 +22,14 @@ module.exports = {
       },
     }],
 }
+
+// 'gatsby-transformer-sharp', 
+// 'gatsby-plugin-sharp',
+// 'gatsby-image',
+// {
+//   resolve: 'gatsby-source-filesystem',
+//   options: {
+//     name: 'images',
+//     path: path.join(__dirname, 'src', 'assets', 'images'),
+//   },
+// },
