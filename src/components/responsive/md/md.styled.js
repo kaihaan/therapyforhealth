@@ -16,8 +16,9 @@ export const StyledMediumContainer = styled.div`
     overflow: hidden;
 
 
-    padding: ${({ nopadding }) => nopadding ? '0px' : '1vw'};
-    margin: ${({ nopadding }) => nopadding ? '0px' : '1vw'};
+    padding: ${({ nopadding }) => nopadding ? '0px' : '2vw'};
+    margin: ${({ nopadding }) => nopadding ? '0px' : '2vw'};
+
     background: ${({ theme, background }) => {
         switch (background) {
             case 'hero':
@@ -63,7 +64,7 @@ export const StyledMediumContainer = styled.div`
 
     /* x4 from xl */
     @media (min-width: ${({ theme }) => `${theme.xl}px`}) {
-        width: calc(0.9*100vw/3);
+        width: calc(0.8*100vw/3);
     }
 
 `

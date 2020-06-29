@@ -19,5 +19,16 @@ module.exports = {
         name: 'images',
         path: path.join(__dirname, 'src', 'assets', 'images'),
       },
-    },],
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`300`, `400`, `600`]
+          }
+        ],
+      },
+    }],
 }

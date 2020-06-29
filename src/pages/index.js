@@ -2,12 +2,21 @@ import React from "react"
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/global';
 import { theme } from '../styles/theme';
-import { Layout, Section, Item, Image, ContainerXL, ContainerLg, ContainerMd } from '../components'
+import { Layout, Section, Item, Image, ContainerXL, ContainerLg, ContainerMd, ContactForm } from '../components'
+import { contactContext } from '../context/contact.context.ts'
+import { useActive } from '../context/contact.hook.tsx'
 
 export default function Home() {
+
+  // create our Scroll to Contact state manager
+  // provide it to all children 
+
+  const active = useActive('Layout')
+ 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      
+      <contactContext.Provider value={active}>
         <GlobalStyles />
 
         { /* HEADER */}
@@ -25,7 +34,7 @@ export default function Home() {
 
           { /* QUOTE */}
 
-          <Section background="dark">
+          <Section background="dark" useDiv>
             <ContainerXL transparent>
               <Item transparent>
                 <h5> “Man should know his own self and know those things which lead to loftiness or baseness to shame or to honour to affluence or to poverty"
@@ -48,7 +57,7 @@ export default function Home() {
             </ContainerLg>
 
             <ContainerLg background="light">
-              <Image image="/flower.jpg" height />
+              <Image image="/flower.jpg" constrainHeight />
             </ContainerLg>
 
           </Section>
@@ -57,7 +66,7 @@ export default function Home() {
 
           <Section background="dark">
             <ContainerMd background="light">
-              <Item>
+              <Item valign="top">
                 <Image image="/flower.jpg"/>
                 <h4>Individual Therapy</h4>
                 <h5> A Happier, Healthier You</h5>
@@ -67,7 +76,7 @@ export default function Home() {
             </ContainerMd>
 
             <ContainerMd background="light">
-              <Item>
+              <Item valign="top">
                 <Image image="/flower.jpg"  />
                 <h4>Trauma Therapy</h4>
                 <h5>In Safe Hands</h5>
@@ -77,7 +86,7 @@ export default function Home() {
             </ContainerMd>
 
             <ContainerMd background="light">
-              <Item>
+              <Item valign="top">
                 <Image image="/flower.jpg" />
                 <h4>Supervision</h4>
                 <h5>Quality of care</h5>
@@ -90,9 +99,12 @@ export default function Home() {
 
           { /* CONTACT */}
 
-          <Section background="hero">
+          <Section background="light" activeState={active.activeState} setActive={active.setActive}  scrollTarget="contactForm">
             <ContainerLg>
               <Item halign="left">
+                <p>Please use these details,</p>
+                <p>or the contact form</p>
+                <hr />
                 <p>78 Sunnyside St</p>
                 <p> Belfast, BT7 3ED</p>
                 <p>United Kingdom</p>
@@ -102,12 +114,12 @@ export default function Home() {
             </ContainerLg>
             <ContainerLg>
             <Item halign="left">
-              <p>CONTACT FORM HERE</p>
+              <ContactForm />
             </Item>
             </ContainerLg>
           </Section>
         </Layout>
-      </>
+      </contactContext.Provider>
     </ThemeProvider>
   )
 }

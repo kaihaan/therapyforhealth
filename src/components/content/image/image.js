@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyledImageBlock } from './image-block.style'
 
-export default ({ image, height }) => {
+export default ({ image, constrainHeight }) => {
     return (
-        <StyledImageBlock height={height}>
+        <StyledImageBlock constrainHeight={constrainHeight}>
             <img src={image} alt={image}/>
         </StyledImageBlock>)
 }

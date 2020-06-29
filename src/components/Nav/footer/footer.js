@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Section, Contact } from '../../components'
+import { Section, Contact } from '../..'
 
 const Footer = () => {
     return(

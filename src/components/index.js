@@ -1,12 +1,26 @@
-export { default as Burger } from './Burger';
-export { default as SideMenu } from './SideMenu';
-export { default as TopMenu } from './HOC/TopMenu';
-export { default as Contact } from './contact'
-export { default as Section } from './HOC/section'
-export { default as Layout } from './HOC/layout'
-export { default as Item } from './HOC/item'
-export { default as Image } from './image'
-export { default as Footer } from './footer'
+
+// Page Chrome & Nav
+export { default as Layout } from './Nav/layout'
+export { default as Footer } from './Nav/footer'
+export { default as Burger } from './Nav/burger';
+export { default as SideMenu } from './Nav/SideMenu';
+export { default as TopMenu } from './Nav/TopMenu';
+export { NavLinks, StyledLink } from './Nav/nav-pages'
+
+// responsive containers
+export { default as Section } from './responsive/section'
+
 export { default as ContainerMd } from './responsive/md' 
 export { default as ContainerXL } from './responsive/xl' 
 export { default as ContainerLg } from './responsive/lg' 
+
+// Content types (going into containers)
+export { default as Item } from './content/item'
+export { default as Image } from './content/image'
+export { default as Contact } from './content/contact'
+export { default as ContactForm } from './content/form'
+
+
+// UI
+export { default as Button } from './UI/button'
+export { default as Logo } from './UI/logo'

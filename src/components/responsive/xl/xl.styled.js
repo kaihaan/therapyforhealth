@@ -9,7 +9,7 @@ import styled from 'styled-components'
 // Medium - x1 less than SM, x2 up to Md etc
 export const StyledXLContainer = styled.div`
     display: flex;
-    width: 100vw;
+    width: 90vw;
     padding: ${({ nopadding }) => nopadding ? '0px' : '2vw'};
     margin:  ${({ nopadding }) => nopadding ? '0px' : '2vw'};
     height: 100%;

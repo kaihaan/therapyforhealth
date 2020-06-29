@@ -7,8 +7,9 @@ export const StyledImageBlock = styled.div`
 
     img {
         object-fit: cover;
-        width: ${({height})=> height ? '' : '100%'};
-        height: ${({height})=> height ? '100%' : ''}
+        width: ${({constrainHeight})=> constrainHeight ? '' : '100%'};
+        height: ${({constrainHeight})=> constrainHeight ? '100%' : ''};
         /* transform: translateX(-25%); */
     }
+
 `

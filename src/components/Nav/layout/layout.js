@@ -1,5 +1,5 @@
 import React from "react"
-import { TopMenu, Footer } from '../../../components'
+import { TopMenu, Footer } from '../..'
 import { StyledLayoutHOC } from './layout.styled' 
 
 export default function Layout({ children }) {

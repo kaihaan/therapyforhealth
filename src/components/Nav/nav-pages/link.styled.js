@@ -1,0 +1,13 @@
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+
+export const StyledLink = styled(Link)`
+    display: inline-block;
+    text-align: left;
+    padding: 0.4rem 0.5rem;
+    color: ${({theme}) => theme.linkColor};
+
+    &:hover, &:focus {
+        color: ${({theme}) => theme.primaryHover};
+    }
+`

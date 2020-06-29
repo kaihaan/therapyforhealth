@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 
-// sm: '576px',
-// md: '768px',
-// lg: '992px',
-// xl: '1200px'
-
 // mobile first
 // Medium - x1 less than SM, x2 up to Md etc
 export const StyledLgContainer = styled.div`
@@ -14,8 +9,10 @@ export const StyledLgContainer = styled.div`
     justify-self: center;
     width: 100vw;
 
-    padding: 2vw;
-    margin: 2vw;
+
+    padding: ${({ nopadding }) => nopadding ? '0px' : '2vw'};
+    margin: ${({ nopadding }) => nopadding ? '0px' : '2vw'};
+
     background: ${({ theme, background }) => {
         switch (background) {
             case 'hero':
@@ -43,7 +40,11 @@ export const StyledLgContainer = styled.div`
         }
     }};
 
-
+    /* sm: '576px',
+    // md: '768px',
+    // lg: '992px',
+    // xl: '1200px'
+    */
     /* x1 from sm to md */
     @media (min-width: ${({ theme }) => `${theme.sm}px`}) {
         width: 100vw;

@@ -7,14 +7,29 @@ export const StyledTopMenu = styled.nav`
     left: 0;
     width: 100%;
     z-index: 5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: ${({ theme }) => theme.primaryLight};
+
     height: 4rem;
     padding: 0px 1rem;
+    background: ${({ theme }) => theme.primaryLight};
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
 
+    & > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    /* show / hide the whole menu */
+    visibility: ${props => (props.show ? 'visible' : 'hidden')};
+    transition: all 200ms ${props => (props.show ? 'ease-in' : 'ease-out')};
+    transform: ${props => (props.show ? 'none' : 'translate(0, -100%)')};
+
+/*
     & > span {
         position: fixed;
         top: 0;
@@ -34,6 +49,7 @@ export const StyledTopMenu = styled.nav`
         padding: 0 auto;
         margin: 0px;
     }
+    */
  /*
     a {
         font-size: 2rem;

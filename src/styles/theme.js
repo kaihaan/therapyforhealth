@@ -4,7 +4,7 @@ export const theme = {
     hero: '#9db946',
     primaryHover: '#9db946',
     video: 'transparent',
-    mobile: '576px',
+    linkColor: '#333',
     sm: '576',
     md: '768',
     lg: '992',
