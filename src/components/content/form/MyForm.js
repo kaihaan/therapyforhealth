@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import classes from './css/MyForm.module.css' 
 import emailjs from 'emailjs-com'
-import { SECRETS } from '../../../secrets/secrets' 
 
 import Input from './Input'
 import Button from './Button'
@@ -120,7 +119,7 @@ export default class Form extends Component {
                 'kaihaan@gmail.com',
                 'template_4BTOCbkt_clone', 
                 event.target, 
-                process.env.GATSBY_CLOUD ? process.env.EMAILJS.USERID : SECRETS.emailjs.userid
+                process.env.EMAILJS.USERID
             )
             console.log(event.target)
             alert("Thankyou.  I will get back to you as soon as possible.")
