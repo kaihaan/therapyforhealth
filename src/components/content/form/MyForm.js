@@ -113,13 +113,14 @@ export default class Form extends Component {
                 formData[key] = value.value
             }
 
+            console.log('email ID - ' + process.env.EMAILJS.USERID)
             // execute form submission!
             //console.log("Submitted!")
             emailjs.sendForm(
                 'kaihaan@gmail.com',
                 'template_4BTOCbkt_clone', 
                 event.target, 
-                SECRETS.emailjs.userid
+                process.env.GATSBY_CLOUD ? process.env.EMAILJS.USERID : SECRETS.emailjs.userid
             )
             console.log(event.target)
             alert("Thankyou.  I will get back to you as soon as possible.")

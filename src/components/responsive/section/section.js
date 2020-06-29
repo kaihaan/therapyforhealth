@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { StyledSection, StyledSectionDiv } from './section.styled'
 import woods from '../../../assets/woods.mp4'
 import pleaseWait from '../../../assets/images/loading-please-wait.jpg'
-import { useActive } from '../../../context/contact.hook.tsx'
+// import { useActive } from '../../../context/contact.hook.tsx'
 
 
 const scrollToRef = (ref) => window.scrollTo({top: ref.current.offsetTop, left: 0, behavior: 'smooth'})
