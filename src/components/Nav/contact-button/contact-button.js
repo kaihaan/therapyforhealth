@@ -20,7 +20,7 @@ export default ({ href }) => {
         // get baseURL from process.env
         const url = typeof window !== 'undefined' ? window.location.href : '';
         const path = url.replace(process.env.BASE_URL, '')
-        // console.log(path)
+        console.log(path)
         if (path !== '/') {
             navigate('/contact')
         } else {

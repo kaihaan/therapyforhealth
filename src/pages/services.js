@@ -7,9 +7,9 @@ import { Layout, Section, Item, Image, ContainerLg } from '../components'
 
 export default function Services({ data }) {
 
-  console.log('Service Page')
-  console.log(data.allContentfulServices)
-  console.log(data.allContentfulAsset.edges[0].node.file.url)
+  // console.log('Service Page')
+  // console.log(data.allContentfulServices)
+  // console.log(data.allContentfulAsset.edges[0].node.file.url)
 
   return (
     <ThemeProvider theme={theme}>
