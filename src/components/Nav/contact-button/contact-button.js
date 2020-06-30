@@ -18,12 +18,13 @@ export default ({ href }) => {
 
         // if not home page && link clicked - then programmatic link to...
         // get baseURL from process.env
+        const baseUrl = process.env.GATSBY_BASE_URL | 'https://therapyforhealth.netlify.app'
         const url = typeof window !== 'undefined' ? window.location.href : '';
-        const path = url.replace(process.env.GATSBY_BASE_URL, '')
+        const path = url.replace(baseUrl, '')
 
-        console.log('process.env.GATSBY_BASE_URL: ' + process.env.GATSBY_BASE_URL)
+        console.log('baseUrl: ' + baseUrl)
         console.log(path)
-        
+
         if (path !== '/') {
             navigate('/contact')
         } else {
