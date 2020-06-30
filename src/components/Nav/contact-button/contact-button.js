@@ -18,7 +18,8 @@ export default ({ href }) => {
 
         // if not home page && link clicked - then programmatic link to...
         // get baseURL from process.env
-        const baseUrl = process.env.GATSBY_BASE_URL | 'https://therapyforhealth.netlify.app'
+        const baseUrl = process.env.GATSBY_BASE_URL === 'undefined' ? 'https://therapyforhealth.netlify.app' : process.env.GATSBY_BASE_URL 
+
         const url = typeof window !== 'undefined' ? window.location.href : '';
         const path = url.replace(baseUrl, '')
 
