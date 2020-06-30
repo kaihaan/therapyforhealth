@@ -23,6 +23,8 @@ export const StyledLgContainer = styled.div`
                 return theme.primaryDark
             case 'video':
                 return 'transparent'
+            case 'transparent':
+                return 'transparent'
             default:
                 return background ? background : 'inherit'
         }

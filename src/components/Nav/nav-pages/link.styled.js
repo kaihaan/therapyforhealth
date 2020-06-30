@@ -10,4 +10,8 @@ export const StyledLink = styled(Link)`
     &:hover, &:focus {
         color: ${({theme}) => theme.primaryHover};
     }
+
+    .active {
+        color: ${({theme}) => theme.primaryHover};
+    }
 `

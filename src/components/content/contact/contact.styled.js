@@ -5,6 +5,7 @@ export const StyledContact = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    width: 100vw;
     padding: 0px;
     margin: 0px;
 

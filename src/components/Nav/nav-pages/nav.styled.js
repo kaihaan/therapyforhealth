@@ -10,8 +10,6 @@ export const StyledNav = styled.nav`
         display: inline-block;
         position: relative;
         white-space: nowrap;
-
-      
     }
 
       /* sm: '576px',

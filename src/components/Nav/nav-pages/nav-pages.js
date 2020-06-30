@@ -6,6 +6,7 @@ import { StyledCaret } from './caret.styled'
 
 export default () => {
 
+
     const [ddIsOpen, setDdIsOpen] = useState(false)
 
     const ddHandler = () => {
@@ -14,15 +15,15 @@ export default () => {
 
     return (
         <StyledNav>
-            <StyledLink to="/services">Services</StyledLink>
-            <div><button type="button" className=" button-link" onClick={ddHandler}>Expertise<StyledCaret pointsUp={ddIsOpen}/></button>
+            <StyledLink to="/services"  activeClassName="activeLink">Services</StyledLink>
+            <div><button type="button" className="button-link" onClick={ddHandler}>Expertise<StyledCaret pointsUp={ddIsOpen}/></button>
                 <StyledDropDownUl isOpen={ddIsOpen}>
-                    <li><StyledLink to="/testimonial">testimonials</StyledLink></li>
-                    <li><StyledLink to="/network">network</StyledLink></li>
-                    <li><StyledLink to="/about">about</StyledLink></li>
+                    <li><StyledLink to="/testimonial" activeClassName="activeLink">testimonials</StyledLink></li>
+                    <li><StyledLink to="/network"  activeClassName="activeLink">network</StyledLink></li>
+                    <li><StyledLink to="/about"  activeClassName="activeLink">about</StyledLink></li>
                 </StyledDropDownUl>
             </div>
-            <StyledLink to="/articles">Articles</StyledLink>
+            <StyledLink to="/articles"  activeClassName="activeLink">Articles</StyledLink>
         </StyledNav>
     )
 }

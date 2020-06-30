@@ -28,6 +28,10 @@ a {
   }
 }
 
+.activeLink {
+  color: ${({ theme }) => theme.primaryHover}
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button, button,

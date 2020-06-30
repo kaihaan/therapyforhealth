@@ -14,12 +14,12 @@ export const StyledSection = styled.section`
     align-content: stretch;
     align-items: stretch;
     max-width: 100%;
+    text-align: center;
     height: 100%;
     max-height: 100%;
-    text-align: center;
-    padding: ${({background})=> background==='video' ? '2vw 0px' : ''};
-    background: ${({theme, background}) => {
-        switch(background){
+    padding: ${({ background }) => background === 'video' ? '2vw 0px' : ''};
+    background: ${({ theme, background }) => {
+        switch (background) {
             case 'hero':
                 return theme.hero
             case 'light':
@@ -28,11 +28,14 @@ export const StyledSection = styled.section`
                 return theme.primaryDark
             case 'video':
                 return 'transparent'
+            case 'transparent':
+                return 'transparent'
             default:
                 return theme.primaryLight
-        }}};
-    color:  ${({theme, background}) => {
-        switch(background){
+        }
+    }};
+    color:  ${({ theme, background }) => {
+        switch (background) {
             case 'hero':
                 return theme.primaryDark
             case 'light':
@@ -41,7 +44,8 @@ export const StyledSection = styled.section`
                 return theme.primaryLight
             default:
                 return theme.primaryDark
-        }}};
+        }
+    }};
 
 
     video {
@@ -66,6 +70,22 @@ export const StyledSection = styled.section`
         opacity: 0.3;
         content: '\A';
         }
+
+    .BackgroundImage {
+        position: fixed;
+        z-index: -10;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .BackgroundImage > img {
+        filter: brightness(50%);
+        transform: translateY(-100px);
+        width: 100vw;
+        object-fit: cover;
+    }
 `
 
 // this will be the Row-Container for responsive Box elements
@@ -81,9 +101,9 @@ export const StyledSectionDiv = styled.div`
     height: 100%;
     max-height: 100%;
     text-align: center;
-    padding: ${({background})=> background==='video' ? '2vw 0px' : ''};
-    background: ${({theme, background}) => {
-        switch(background){
+    padding: ${({ background }) => background === 'video' ? '2vw 0px' : ''};
+    background: ${({ theme, background }) => {
+        switch (background) {
             case 'hero':
                 return theme.hero
             case 'light':
@@ -94,9 +114,10 @@ export const StyledSectionDiv = styled.div`
                 return 'transparent'
             default:
                 return theme.primaryLight
-        }}};
-    color:  ${({theme, background}) => {
-        switch(background){
+        }
+    }};
+    color:  ${({ theme, background }) => {
+        switch (background) {
             case 'hero':
                 return theme.primaryDark
             case 'light':
@@ -105,7 +126,8 @@ export const StyledSectionDiv = styled.div`
                 return theme.primaryLight
             default:
                 return theme.primaryDark
-        }}};
+        }
+    }};
 
 
     video {
