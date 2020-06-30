@@ -21,9 +21,9 @@ export default ({ href }) => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
         const path = url.replace(process.env.GATSBY_BASE_URL, '')
 
-        console.log('ENV Base_URL: ' + process.env.GATSBY_BASE_URL)
-
+        console.log('process.env.GATSBY_BASE_URL: ' + process.env.GATSBY_BASE_URL)
         console.log(path)
+        
         if (path !== '/') {
             navigate('/contact')
         } else {
