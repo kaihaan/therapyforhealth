@@ -11,6 +11,7 @@ const scrollToRef = (ref) => window.scrollTo({ top: ref.current.offsetTop, left:
 
 export default ({ useDiv, video, children, background, scrollTarget, activeState, imageUrl }) => {
 
+    
     // console.log('Section Image : ' + imageUrl)
 
     const videoRef = useRef(null)
