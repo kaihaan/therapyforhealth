@@ -19,9 +19,9 @@ export default ({ href }) => {
         // if not home page && link clicked - then programmatic link to...
         // get baseURL from process.env
         const url = typeof window !== 'undefined' ? window.location.href : '';
-        const path = url.replace(process.env.BASE_URL, '')
+        const path = url.replace(process.env.GATSBY_BASE_URL, '')
 
-        console.log('ENV Base_URL: ' + process.env.BASE_URL)
+        console.log('ENV Base_URL: ' + process.env.GATSBY_BASE_URL)
 
         console.log(path)
         if (path !== '/') {
