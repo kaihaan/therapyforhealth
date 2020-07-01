@@ -12,14 +12,14 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   plugins: [
-    'gatsby-plugin-styled-components', 
-      {
-       resolve: `gatsby-source-contentful`,
-       options: {
-         spaceId: process.env.CONTENTFUL_SPACE_ID,
-         accessToken: process.env.CONTENTFUL_TOKEN, 
-       },
-     },
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -30,7 +30,15 @@ module.exports = {
           }
         ],
       },
-    }],
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: path.join(__dirname, 'src'),
+      },
+    },
+  ],
 }
 
 // 'gatsby-transformer-sharp', 

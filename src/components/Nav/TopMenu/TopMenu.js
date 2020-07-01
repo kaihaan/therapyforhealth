@@ -17,23 +17,22 @@ export default () => {
         // if gone UP the page....
         const shouldShow = currPos.y > prevPos.y
         if (shouldShow !== isNavBarHidden) setNavBarIsHidden(shouldShow)
-
-        
-
     }, [isNavBarHidden], null, false, 200)
 
 
     // NOTE: OTHERWISE POINTLESS INNER DIV ALLOWS FOR STYLING!!
 
     return (
-        <StyledTopMenu show={isNavBarHidden}>
-            <div>
-                <Logo />
-                <NavLinks />
-                <ContactButton/>
-                <Burger open={open} setOpen={setOpen} />
-                <SideMenu open={open} setOpen={setOpen} />
-            </div>
-        </StyledTopMenu>
+        <>
+            <StyledTopMenu show={isNavBarHidden}>
+                <div>
+                    <Logo />
+                    <NavLinks />
+                    <ContactButton />
+                    <Burger open={open} setOpen={setOpen} />
+                </div>
+            </StyledTopMenu>
+            <SideMenu open={open} setOpen={setOpen} show={isNavBarHidden}/>
+        </>
     )
 }

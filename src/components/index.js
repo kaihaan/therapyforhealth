@@ -20,6 +20,10 @@ export { default as Image } from './content/image'
 export { default as Contact } from './content/contact'
 export { default as ContactForm } from './content/form'
 
+// Page fragments
+export {default as Post} from './programatic/post'
+export {default as Stub} from './programatic/stub'
+
 
 // UI
 export { default as Button } from './UI/button'

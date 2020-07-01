@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
-    display: flex;
+    display: none;
     align-items: baseline;
     justify-content: space-between;
     flex-grow: 1.2;
