@@ -23,7 +23,7 @@ export default () => {
                     <li><StyledLink to="/about"  activeClassName="activeLink">about</StyledLink></li>
                 </StyledDropDownUl>
             </div>
-            <StyledLink to="/articles"  activeClassName="activeLink">Articles</StyledLink>
+            <StyledLink to="/articles/index/1"  activeClassName="activeLink">Articles</StyledLink>
         </StyledNav>
     )
 }

@@ -10,7 +10,7 @@ export default function Testimonials() {
       <>
         <GlobalStyles />
         <Layout>
-        <Section background="light">
+          <Section background="light">
             <ContainerLg>
               <Item halign="left">
                 <p>Please use these details,</p>
@@ -32,9 +32,10 @@ export default function Testimonials() {
             </ContainerLg>
           </Section>
 
- 
+
         </Layout>
       </>
     </ThemeProvider>
   )
 }
+

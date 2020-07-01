@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledContactButton = styled.span`
-    display: flex;
+    display: none;
     flex-grow: 1;
     align-self: center;
     

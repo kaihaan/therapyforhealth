@@ -19,10 +19,11 @@ export const StyledBurger = styled.button`
     outline: none;
   }
   
+  /*  ${({ theme, open }) => open ? theme.primaryLight : theme.primaryDark} */
   div {
     width: 100%;
     height: 15%;
-    background: ${({ theme, open }) => open ? theme.primaryLight : theme.primaryDark};
+    background: ${({ theme }) => theme.primaryDark};
     border-radius: 15px;
     transition: all 0.3s linear;
     position: relative;

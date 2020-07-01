@@ -4,9 +4,9 @@ import { StyledSideMenu } from './side-menu.styled';
 import PropTypes from 'prop-types';
 import { Link } from "gatsby"
 
-const Menu = ({open}) => {
+const Menu = ({open, show}) => {
     return (
-        <StyledSideMenu open={open}>
+        <StyledSideMenu open={open} show={show}>
             <Link to="/"> home </Link>
             <Link to="/services"> services</Link>
             <Link to="/testimonial"> testimonials</Link>
