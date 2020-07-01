@@ -108,6 +108,11 @@ a {
   color: #1eaedb;
   text-decoration: none;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
 }
 a:hover {
   color: #0fa0ce;
