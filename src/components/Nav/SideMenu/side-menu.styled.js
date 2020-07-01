@@ -7,6 +7,7 @@ export const StyledSideMenu = styled.nav`
   justify-content: space-around;
   background: ${({ theme }) => theme.primaryDark};
   width: 100vw;
+  height: 100vh;
   text-align: center;
   padding: 5.2rem 0 1rem 0;
   position: fixed;

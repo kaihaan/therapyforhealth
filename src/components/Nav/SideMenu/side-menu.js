@@ -11,7 +11,7 @@ const Menu = ({open, show}) => {
             <Link to="/services"> services</Link>
             <Link to="/testimonial"> testimonials</Link>
             <Link to="/network"> network</Link>
-            <Link to="/articles"> articles</Link>
+            <Link to="/articles/index/1"> articles</Link>
             <Link to="/about"> about</Link>
             <Link to="/contact"> contact</Link>
         </StyledSideMenu>
