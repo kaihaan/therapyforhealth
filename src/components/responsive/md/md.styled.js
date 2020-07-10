@@ -10,7 +10,7 @@ import styled from 'styled-components'
 export const StyledMediumContainer = styled.div`
 
     display: flex;
-    flex-direction: column;
+    flex-direction: ${({row})=> row ? 'row' : 'column'};
     justify-content: ${({valign})=> valign === 'top' ? 'start' : 'center'};
     width: 100vw;
     overflow: hidden;

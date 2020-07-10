@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../../../styles/global';
 import { theme } from '../../../styles/theme';
 import Stub from '../stub/stub'
-import { Layout } from '../..'
+import { Layout, Section, ContainerMd } from '../..'
 
 
 export default function Articles(props) {
@@ -17,20 +17,28 @@ export default function Articles(props) {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Layout>
+
         {data.posts.edges.map((edge) => {
           console.log(edge.node.slug)
-          return <Stub background="light" post={edge.node} link={`/articles/${edge.node.slug}`} key={edge.node.id} />
+          return (
+            <Section background="dark">
+                <Stub background="light" post={edge.node} link={`/articles/${edge.node.slug}`} key={edge.node.id} />
+            </Section>)
         })}
 
-        {pageContext && pageContext.hasNextPage && (
-          <Link to={pageContext.nextPageLink}>Next page</Link>
-        )}
+        <Section>
+          <ContainerMd>
+            {pageContext && pageContext.hasPrevPage && (
+              <Link to={pageContext.prevPageLink}>Next page</Link>
+            )}
+            {pageContext && pageContext.hasNextPage && (
+              <Link to={pageContext.nextPageLink}>Next page</Link>
+            )}
 
-        {pageContext && pageContext.hasPrevPage && (
-          <Link to={pageContext.prevPageLink}>Next page</Link>
-        )}
+          </ContainerMd>
+        </Section>
       </Layout>
-    </ThemeProvider>
+    </ThemeProvider >
   )
 }
 

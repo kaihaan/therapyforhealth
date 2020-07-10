@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // Medium - x1 less than SM, x2 up to Md etc
 export const StyledLgContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: ${({ row }) => row ? 'row' : 'column'};
     justify-content: center;
     justify-self: center;
     width: 100vw;
